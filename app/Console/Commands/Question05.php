@@ -6,15 +6,17 @@ use Illuminate\Console\Command;
 
 class Question05 extends Command
 {
-    protected $signature = 'Question05';
+    protected $signature = 'q5';
 
     public function handle()
     {
-        // collect()->macro('foo', function () {
-        //     return 'bar';
-        // });
+        collect()->macro('foo', function () {
+            return 'bar';
+        });
 
-        // echo [collect(), 'foo']('baz');
+        echo [collect(), 'foo']('baz');
+
+        echo PHP_EOL;
 
         // A) foo
         // B) bar

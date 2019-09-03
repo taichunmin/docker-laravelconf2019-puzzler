@@ -6,20 +6,22 @@ use Illuminate\Console\Command;
 
 class Question12 extends Command
 {
-    protected $signature = 'Question12';
+    protected $signature = 'q12';
 
     public function handle()
     {
-        // $array = [[1, 0], 1, 0];
-        // $callback = function (&$value) use (&$callback) {
-        //     if (is_array($value)) {
-        //         $value = array_filter($value, $callback);
-        //     }
+        $array = [[1, 0], 1, 0];
+        $callback = function (&$value) use (&$callback) {
+            if (is_array($value)) {
+                $value = array_filter($value, $callback);
+            }
 
-        //     return $value;
-        // };
+            return $value;
+        };
 
-        // echo json_encode(array_filter($array, $callback));
+        echo json_encode(array_filter($array, $callback));
+
+        echo PHP_EOL;
 
         // A) [[],1]
         // B) [[1],1]

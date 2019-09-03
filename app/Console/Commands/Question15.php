@@ -7,26 +7,28 @@ use Illuminate\Pipeline\Pipeline;
 
 class Question15 extends Command
 {
-    protected $signature = 'Question15';
+    protected $signature = 'q15';
 
     public function handle()
     {
-        // $foo = function ($passable, $next) {
-        //     echo 2;
-        //     $next($passable);
-        // };
+        $foo = function ($passable, $next) {
+            echo 2;
+            $next($passable);
+        };
 
-        // $bar = function ($passable, $next) {
-        //     $next($passable);
-        //     echo 3;
-        //     $next($passable);
-        // };
+        $bar = function ($passable, $next) {
+            $next($passable);
+            echo 3;
+            $next($passable);
+        };
 
-        // app(Pipeline::class)->send(1)
-        //                     ->through($foo, $bar)
-        //                     ->then(function ($passable) {
-        //                         echo $passable;
-        //                     });
+        app(Pipeline::class)->send(1)
+            ->through($foo, $bar)
+            ->then(function ($passable) {
+                echo $passable;
+            });
+
+        echo PHP_EOL;
 
         // A) 213
         // B) 321

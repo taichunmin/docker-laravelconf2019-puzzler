@@ -6,15 +6,17 @@ use Illuminate\Console\Command;
 
 class Question13 extends Command
 {
-    protected $signature = 'Question13';
+    protected $signature = 'q13';
 
     public function handle()
     {
-        // app()->bindMethod(['foo', 'bar'], function () {
-        //     return 'bar';
-        // });
+        app()->bindMethod(['foo', 'bar'], function () {
+            return 'bar';
+        });
 
-        // echo app()->call('foo@bar', [], 'baz');
+        echo app()->call('foo@bar', [], 'baz');
+
+        echo PHP_EOL;
 
         // A) foo
         // B) bar

@@ -6,12 +6,14 @@ use Illuminate\Console\Command;
 
 class Question08 extends Command
 {
-    protected $signature = 'Question08';
+    protected $signature = 'q8';
 
     public function handle()
     {
-        // echo 0 ?: 1;
-        // echo 0 ?? 1;
+        echo 0 ?: 1;
+        echo 0 ?? 1;
+
+        echo PHP_EOL;
 
         // A) 00
         // B) 01

@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class Question01 extends Command
 {
-    protected $signature = 'Question01';
+    protected $signature = 'q1';
 
     public function handle()
     {
